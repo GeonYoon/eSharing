@@ -2,7 +2,7 @@
 
 This is a web application that can create mutiple surveys and sends them through emails. Plus, this app can automatically shows the survey results from people who recieve the emails. Additionally app-users can login with Google account and buy the credits that can be used to create surveys
 
-## Getting Started
+## How To Use
 
 ### 1. Check-out production version 
 
@@ -11,14 +11,46 @@ Create your account with google account and start to use the application
 
 ### 2. Install in your local machine 
 
+install node modules in both root directory and client folder 
 ```
 npm install  
 cd client  
 npm install  
+cd..
 ```
+create dev.js 
+```
+cd config
+touch dev.js
+```
+customize your own dev.js
+```
+module.exports = {
+    googleClientID: 'GOOGLE_API_KEY',
+    googleClientSecret: 'GOOGLE_API_SECRET_KEY',
+    mongoURI: 'MLAB_API_KEY',
+    cookieKey: 'CREATE_RANDOM_KEYS',
+    stripePublishableKey: 'STRIPE_API_KEY',
+    stripeSecretKey: 'STRIPE_API_SECRET_KEY',
+    sendGridKey: 'SENDGRID_API_KEY',
+    redirectDomain: 'http:localhost:8081'
+};
+```
+Create random webhook link and modify sendgrid_webhook.sh
+```
+function localtunnel {
+  lt -s YOUR_RANDOM_LINK --port 8080
+}
+until localtunnel; do
+echo "localtunnel server crashed"
+sleep 2
+done
+```
+Run the application by entering following line
 
-
-
+```
+npm run dev
+```
 
 ## Built With
 
