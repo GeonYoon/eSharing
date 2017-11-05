@@ -6,7 +6,7 @@ This is a web application that can create mutiple surveys and sends them through
 
 ### 1. Check-out production version 
 
-Go to [Webpage](https://whispering-falls-98221.herokuapp.com)
+Go to [Webpage](https://whispering-falls-98221.herokuapp.com)  
 Create your account with google account and start to use the application 
 
 ### 2. Install in your local machine 
