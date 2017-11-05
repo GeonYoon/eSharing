@@ -1,6 +1,6 @@
 # Eamily
 
-This is a web application that can create mutiple surveys and sends them through emails. Plus, this app can automatically shows the survey results from people who recieve the emails. Additionally app-users can login with Google account and buy the credits that can be used to create surveys
+This is a web application that can create mutiple surveys and send them through emails. Plus, this app can automatically shows the survey results from people who recieve the emails. Additionally app-users can login with Google account and buy the credits that can be used to create surveys
 
 ## How To Use
 
@@ -11,19 +11,19 @@ Create your account with google account and start to use the application
 
 ### 2. Install in your local machine 
 
-install node modules in both root directory and client folder 
+Install node modules in both root directory and client folder 
 ```
 npm install  
 cd client  
 npm install  
 cd..
 ```
-create dev.js 
+Create dev.js 
 ```
 cd config
 touch dev.js
 ```
-customize your own dev.js
+Customize your own dev.js
 ```
 module.exports = {
     googleClientID: 'GOOGLE_API_KEY',
