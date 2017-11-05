@@ -33,7 +33,7 @@ module.exports = {
     stripePublishableKey: 'STRIPE_API_KEY',
     stripeSecretKey: 'STRIPE_API_SECRET_KEY',
     sendGridKey: 'SENDGRID_API_KEY',
-    redirectDomain: 'http:localhost:8081'
+    redirectDomain: 'http://localhost:8081'
 };
 ```
 Create random webhook link and modify sendgrid_webhook.sh
