@@ -1,10 +1,11 @@
 # Eamily
 
-One Paragraph of project description goes here
+This is a web application that can create mutiple surveys and sends them through emails. Plus, this app can automatically shows the survey results from people who recieve the emails. Additionally app-users can login with Google account and buy the credits that can be used to create surveys
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+
+
 
 
 ## Built With
@@ -26,6 +27,3 @@ These instructions will get you a copy of the project up and running on your loc
 ## Authors
 
 * **Geon Yoon ** - *Initial work* - [GeonYoon](https://github.com/GeonYoon)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
