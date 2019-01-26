@@ -93,5 +93,15 @@ module.exports = app => {
             // which means somethiing is wrong with the data you sent us
             res.status(422).send(err);
         }
-    }) ;     
+    });
+    
+    app.delete('/api/surveys/delete/:id', async (req, res) => {
+        console.log("here");
+        await Survey.deleteOne({ _id: req.params.id });
+        const survey = await Survey.find({ _user: req.user.id }).sort({dateSent: -1}).select({
+          recipients: false
+        });
+        res.send(survey);
+      });
+      
 };

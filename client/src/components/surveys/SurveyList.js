@@ -24,7 +24,7 @@ class SurveyList extends Component {
                         <a>No: {survey.no}</a>
                         <i
                             className = "material-icons right"
-                            // onClick={() => this.props.TodoActions.deleteTodos(todo._id)}
+                            onClick={() => this.props.deleteSurveys(survey._id)}
                             style={{cursor:"pointer"}}
                         >
                             delete
