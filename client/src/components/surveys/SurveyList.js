@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { fetchSurveys } from '../../actions';
 
 class SurveyList extends Component {
     // what is life cycle method? 
@@ -24,7 +22,15 @@ class SurveyList extends Component {
                     <div className="card-action">
                         <a>Yes : {survey.yes}</a>
                         <a>No: {survey.no}</a>
+                        <i
+                            className = "material-icons right"
+                            onClick={() => this.props.deleteSurveys(survey._id)}
+                            style={{cursor:"pointer"}}
+                        >
+                            delete
+                        </i>
                     </div>
+
                 </div>
             );
         });
@@ -40,11 +46,4 @@ class SurveyList extends Component {
     }
 }
 
-
-// when you see index.js in reducers folder, you set surveysReducer as sruveys. 
-// Therefore -> state.surveys
-function mapStateToProps({ surveys }) {
-    return { surveys };
-}
-
-export default connect(mapStateToProps, { fetchSurveys })(SurveyList);
+export default SurveyList
