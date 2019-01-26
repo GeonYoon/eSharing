@@ -96,7 +96,6 @@ module.exports = app => {
     });
     
     app.delete('/api/surveys/delete/:id', async (req, res) => {
-        console.log("here");
         await Survey.deleteOne({ _id: req.params.id });
         const survey = await Survey.find({ _user: req.user.id }).sort({dateSent: -1}).select({
           recipients: false
