@@ -42,6 +42,7 @@ app.use(passport.session());
 require('./routes/authRoutes')(app);
 require('./routes/billingRoutes')(app);
 require('./routes/surveyRoutes')(app);
+require('./services/scrape')(app);
 
 //configuration to make sure that exrpess
 // essentially behaves correctly when it is in the production environment. 
