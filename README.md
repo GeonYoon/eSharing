@@ -1,6 +1,12 @@
-# Eamily
+# eSharing
 
-This is a web application that can create mutiple surveys and send them through emails. Plus, this app can automatically shows the survey results from people who recieve the emails. Additionally app-users can login with Google account and buy the credits that can be used to create surveys
+eSharing automatically collects the latest scientific articles related to computer science and shows to the users.  Then they can easily share the news through email and then collect feedbacks. This application supports simple sign-in / log-in via Google account. 
+
+## Notable features
+- Bring live data by using web  scraping
+- Able to share the article with multiple people through the mail 
+- Collect feedback from the people who receive the emails
+- Support Google log-in / sign-in
 
 ## How To Use
 
@@ -11,19 +17,26 @@ Create your account with google account and start to use the application
 
 ### 2. Install in your local machine 
 
-Install node modules in both root directory and client folder 
+Install dependencies in client side
 ```
-npm install  
 cd client  
 npm install  
 cd..
 ```
-Create dev.js 
+
+Install dependencies in server side
+```
+npm install
+```
+
+Create file to save keys for local development
 ```
 cd config
 touch dev.js
 ```
-Customize your own dev.js
+
+Create accounts in google devleoper console, Mlab, Stripe, and Sendgrid. 
+Customize your own dev.js and copy each keys on he file. 
 ```
 module.exports = {
     googleClientID: 'GOOGLE_API_KEY',
@@ -35,8 +48,9 @@ module.exports = {
     sendGridKey: 'SENDGRID_API_KEY',
     redirectDomain: 'http://localhost:8081'
 };
+
 ```
-Create random webhook link and modify sendgrid_webhook.sh
+Create a random link and modify sendgrid_webhook.sh
 ```
 function localtunnel {
   lt -s YOUR_RANDOM_LINK --port 8080
@@ -46,6 +60,7 @@ echo "localtunnel server crashed"
 sleep 2
 done
 ```
+
 Run the application by entering following line
 
 ```
@@ -65,8 +80,8 @@ npm run dev
 * [Sendgrid](https://sendgrid.com/) - Cloud-based email delivery platform
 * [Passport.js](http://www.passportjs.org/) - Passport is authentication middleware for Node.js
 * [Stripe](https://stripe.com/docs/stripe-js/reference) - Used to handle payment system
-
-
+* [cheerio](https://cheerio.js.org/) - Used to do web scrapping
+* [axios](https://www.npmjs.com/package/axios) - Promise based HTTP client for the browser and node.js
 
 ## Authors
 
