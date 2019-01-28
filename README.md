@@ -7,6 +7,7 @@ eSharing automatically collects the latest scientific articles related to comput
 - Able to share the article with multiple people through the mail 
 - Collect feedback from the people who receive the emails
 - Support Google log-in / sign-in
+- Payment system is available 
 
 ## How To Use
 
