@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import * as actions from '../actions';
 
 import dashboardContainer from '../containers/dashboardContainer';
+import newsContainer from '../containers/newsContainer';
 
 import Header from './Header';
 import Landing from './Landing'
@@ -25,6 +26,7 @@ class App extends Component {
                     <Switch>
                         <Route exact path="/" component={Landing} />
                         <Route exact path="/surveys" component={dashboardContainer}/>
+                        <Route exact path="/news" component={newsContainer}/>
                         <Route path="/surveys/new" component={SurveyNew}/>
                     </Switch>
                 </div>
