@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import Payments from './Payments';
+import '../css/nav.css'
+
+
 
 class Header extends Component {
     
@@ -21,11 +24,11 @@ class Header extends Component {
                     <li key="3" style={{margin: '0 10px'}}>
                         Credits: {this.props.auth.credits}
                     </li>,
+                    <li key='4'><Link to={'/news'}>News</Link></li>,
                     <li key="2"><a href="/api/logout">Logout</a></li>
                 ];
         }
     }
-    
     render() {
         return (
                 <nav>
