@@ -7,6 +7,7 @@ eSharing automatically collects the latest scientific articles related to comput
 - Able to share the article with multiple people through the mail 
 - Collect feedback from the people who receive the emails
 - Support Google log-in / sign-in
+- Payment system is available 
 
 ## How To Use
 
@@ -29,13 +30,14 @@ Install dependencies in server side
 npm install
 ```
 
-Create file to save keys for local development
+Create dev.js to save keys for local development
 ```
 cd config
 touch dev.js
 ```
 
 Create accounts in google devleoper console, Mlab, Stripe, and Sendgrid. 
+
 Customize your own dev.js and copy each keys on he file. 
 ```
 module.exports = {
@@ -50,7 +52,7 @@ module.exports = {
 };
 
 ```
-Create a random link and modify sendgrid_webhook.sh
+Customize sendgrid_webhook.sh
 ```
 function localtunnel {
   lt -s YOUR_RANDOM_LINK --port 8080
