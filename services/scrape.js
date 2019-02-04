@@ -1,7 +1,7 @@
 const cheerio = require('cheerio');
 const axios = require("axios");
  
-module.exports = async function test(app){
+module.exports = async function test(){
     var sub_link = [] 
     var data = []
     const main_url = await axios.get('https://www.sciencedaily.com/news/computers_math/computer_programming/')
@@ -28,5 +28,5 @@ module.exports = async function test(app){
         })
         data.push(inner_data);
     }
-    console.log(data);
+    return data
 }

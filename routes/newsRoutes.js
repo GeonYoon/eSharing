@@ -12,15 +12,11 @@ const surveyTemplate = require('../services/emailTemplates/surveyTemplate');
 
 // const Survey = mongoose.model('surveys');
 
-module.exports = app => {
+module.exports =  app => {
     
     app.get('/api/news', requireLogin ,async(req,res) => {
-        const surveys = await Survey.find({ _user: req.user.id })
-            .select({ recipients : false});
-        
-        const scrape = new Scrape(survey, surveyTemplate(survey));
-
-        res.send(surveys);
+        const scrape =  await Scrape();
+        res.send(scrape);
     });
     
     // app.get('/api/surveys/:surveyId/:choice', (req,res) => {
