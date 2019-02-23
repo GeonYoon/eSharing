@@ -14,19 +14,16 @@ module.exports = async function test(){
     })
     
     for (var i = 0; i<sub_link.length; i++){
-        var inner_data = []
-        inner_data.push(sub_link[i])
+        var data,source,summary;
         const sub_url = await axios.get(sub_link[i])
         var $ = cheerio.load(sub_url.data);
-        const title = $('.headline').text()
-        inner_data.push(title);
+        const title = $('.headline').text()       
         $('.dl-horizontal').each((index, element) => {
-            const date = $(element).find('#date_posted').text()
-            const source = $(element).find('#source').text()
-            const summary = $(element).find('#abstract').text() 
-            inner_data.push(date,source,summary)   
+            date = $(element).find('#date_posted').text()
+            source = $(element).find('#source').text()
+            summary = $(element).find('#abstract').text() 
         })
-        data.push(inner_data);
+        data.push({"title": title,"key":i, "url":sub_link[i], "date":date, "source":source, "summary":summary});
     }
     return data
 }

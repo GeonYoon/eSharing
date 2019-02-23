@@ -15,20 +15,23 @@ import SurveyNew from './surveys/SurveyNew'
 class App extends Component {
     componentDidMount(){
         this.props.fetchUser();
+        this.props.fetchNews();
     }
     
     render() {
         return (
-        <div className="container">
+        <div>
             <BrowserRouter>
                 <div>
                     <Header />
-                    <Switch>
-                        <Route exact path="/" component={Landing} />
-                        <Route exact path="/surveys" component={dashboardContainer}/>
-                        <Route exact path="/news" component={newsContainer}/>
-                        <Route path="/surveys/new" component={SurveyNew}/>
-                    </Switch>
+                    <div className="container">
+                        <Switch>
+                            <Route exact path="/" component={Landing} />
+                            <Route exact path="/surveys" component={dashboardContainer}/>
+                            <Route exact path="/news" component={newsContainer}/>
+                            <Route path="/surveys/new" component={SurveyNew}/>
+                        </Switch>
+                    </div>
                 </div>
             </BrowserRouter>
         </div>

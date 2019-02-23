@@ -21,21 +21,23 @@ class Header extends Component {
                     <li key="1"><Payments /></li>,
                     // first piece indicate top and bottom margin
                     // second piece idicate let and right hand margin
-                    <li key="3" style={{margin: '0 10px'}}>
+                    <li key="2" style={{margin: '0 10px'}}>
                         Credits: {this.props.auth.credits}
                     </li>,
-                    <li key='4'><Link to={'/news'}>News</Link></li>,
-                    <li key="2"><a href="/api/logout">Logout</a></li>
+                    <li key='3'><Link to={'/news'}>News</Link></li>,
+                    <li key='4'><Link to={'/surveys'}>history</Link></li>,
+                    <li key="5"><a href="/api/logout">Logout</a></li>
                 ];
         }
     }
     render() {
         return (
+            <div className="navbar-fixed">
                 <nav>
-                    <div className="nav-wrapper">
+                    <div className="nav-wrapper brown lighten-2">
                         <Link 
-                            to={this.props.auth ? '/surveys' : '/'}
-                            className="left brand-logo"
+                            to={this.props.auth ? '/news' : '/'}
+                            className="left brand-logo" 
                         >
                             eSharing
                         </Link>
@@ -44,6 +46,7 @@ class Header extends Component {
                         </ul>
                     </div>
                 </nav>
+            </div>
             );
     }
 }

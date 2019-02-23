@@ -1,16 +1,16 @@
 import {
-    FETCH_SURVEYS
+    FETCH_NEWS
   } from '../actions/types';
 import { handleActions } from 'redux-actions';
   
 const formInitialState = {
-    surveys : []
+    news : []
 }
-
 export default handleActions({
-    [FETCH_SURVEYS] : (state, action) => {
+    [FETCH_NEWS] : (state, action) => {
+        console.log(action.payload)
         return {
-            surveys : action.payload
+            news : action.payload
         }
     }
 }, formInitialState)

@@ -1,23 +1,23 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import News from '../components/News';
-// import {fetchSurveys, deleteSurveys} from '../actions';
+// import {fetchNews} from '../actions';
 import { withRouter } from 'react-router-dom';
 
 class newsContainer extends Component {
   render(){
+    const {news} = this.props;
     return <News 
-        
+            news = {news}
             />;
   }
 }
 
-
-// const mapStateToProps = ({surveys}) => {
-//   return {
-//     surveys : surveys.surveys
-//   }
-// };
+const mapStateToProps = ({news}) => {
+  return {
+    news : news.news
+  }
+};
 // const mapDispatchToProps = (dispatch) => ({
 //   fetchSurveys: () => {
 //     dispatch(fetchSurveys());
@@ -26,4 +26,4 @@ class newsContainer extends Component {
 //     dispatch(deleteSurveys(id));
 //   }
 // });
-export default withRouter(connect(null,null)(newsContainer));
+export default withRouter(connect(mapStateToProps,null)(newsContainer));
