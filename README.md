@@ -1,4 +1,4 @@
-# eSharing (still under development)
+# eSharing
 
 eSharing automatically collects the latest scientific articles related to computer science and shows to the users.  Then they can easily share the news through email and then collect feedbacks. This application supports simple sign-in / log-in via Google account. 
 
